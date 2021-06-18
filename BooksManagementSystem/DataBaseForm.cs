@@ -7,20 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsWithSql;
 
 namespace BooksManagementSystem
 {
-    public partial class MainForm : Form
+    public partial class DataBaseForm : Form
     {
-        public MainForm()
+        public DataBaseForm()
         {
             InitializeComponent();
-        }
-
-        private void 书籍维护ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new BookMainForm().Show();
         }
     }
 }

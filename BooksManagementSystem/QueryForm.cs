@@ -34,5 +34,10 @@ namespace WindowsFormsWithSql
             bookGridView.DataSource = dt;
             ((DataGridViewImageColumn)bookGridView.Columns["pic"]).ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
+
+        private void QueryForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

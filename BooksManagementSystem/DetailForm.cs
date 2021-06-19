@@ -129,5 +129,10 @@ namespace WindowsFormsWithSql
 				labelPicSize.Text = String.Format("当前为{0:F}MB",size);
 			}
 		}
+
+        private void DetailForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

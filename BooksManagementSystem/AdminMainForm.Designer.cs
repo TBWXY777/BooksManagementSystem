@@ -43,6 +43,7 @@ namespace BooksManagementSystem
             this.读者书籍表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.书籍书架表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.管理员表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,25 +90,25 @@ namespace BooksManagementSystem
             // 添加读者ToolStripMenuItem
             // 
             this.添加读者ToolStripMenuItem.Name = "添加读者ToolStripMenuItem";
-            this.添加读者ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.添加读者ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.添加读者ToolStripMenuItem.Text = "添加读者";
             // 
             // 删除读者ToolStripMenuItem
             // 
             this.删除读者ToolStripMenuItem.Name = "删除读者ToolStripMenuItem";
-            this.删除读者ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.删除读者ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.删除读者ToolStripMenuItem.Text = "删除读者";
             // 
             // 更新读者ToolStripMenuItem
             // 
             this.更新读者ToolStripMenuItem.Name = "更新读者ToolStripMenuItem";
-            this.更新读者ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.更新读者ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.更新读者ToolStripMenuItem.Text = "更新读者";
             // 
             // 查询读者ToolStripMenuItem
             // 
             this.查询读者ToolStripMenuItem.Name = "查询读者ToolStripMenuItem";
-            this.查询读者ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.查询读者ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.查询读者ToolStripMenuItem.Text = "查询读者";
             // 
             // 查看数据库ToolStripMenuItem
@@ -125,43 +126,54 @@ namespace BooksManagementSystem
             // 读者表ToolStripMenuItem
             // 
             this.读者表ToolStripMenuItem.Name = "读者表ToolStripMenuItem";
-            this.读者表ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.读者表ToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.读者表ToolStripMenuItem.Text = "读者表";
             this.读者表ToolStripMenuItem.Click += new System.EventHandler(this.读者表ToolStripMenuItem_Click);
             // 
             // 书籍表ToolStripMenuItem
             // 
             this.书籍表ToolStripMenuItem.Name = "书籍表ToolStripMenuItem";
-            this.书籍表ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.书籍表ToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.书籍表ToolStripMenuItem.Text = "书籍表";
             this.书籍表ToolStripMenuItem.Click += new System.EventHandler(this.书籍表ToolStripMenuItem_Click);
             // 
             // 读者书籍表ToolStripMenuItem
             // 
             this.读者书籍表ToolStripMenuItem.Name = "读者书籍表ToolStripMenuItem";
-            this.读者书籍表ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.读者书籍表ToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.读者书籍表ToolStripMenuItem.Text = "读者-书籍表";
             this.读者书籍表ToolStripMenuItem.Click += new System.EventHandler(this.读者书籍表ToolStripMenuItem_Click);
             // 
             // 书籍书架表ToolStripMenuItem
             // 
             this.书籍书架表ToolStripMenuItem.Name = "书籍书架表ToolStripMenuItem";
-            this.书籍书架表ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.书籍书架表ToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.书籍书架表ToolStripMenuItem.Text = "书籍-书架表";
             this.书籍书架表ToolStripMenuItem.Click += new System.EventHandler(this.书籍书架表ToolStripMenuItem_Click);
             // 
             // 管理员表ToolStripMenuItem
             // 
             this.管理员表ToolStripMenuItem.Name = "管理员表ToolStripMenuItem";
-            this.管理员表ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.管理员表ToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.管理员表ToolStripMenuItem.Text = "管理员表";
             this.管理员表ToolStripMenuItem.Click += new System.EventHandler(this.管理员表ToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(318, 64);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AdminMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
@@ -192,6 +204,7 @@ namespace BooksManagementSystem
         private System.Windows.Forms.ToolStripMenuItem 读者书籍表ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 书籍书架表ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 管理员表ToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 

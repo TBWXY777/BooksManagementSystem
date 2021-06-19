@@ -75,5 +75,11 @@ namespace BooksManagementSystem
             dbForm.dbGridView.DataSource = dt;
             dbForm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BorrowersForm a = new BorrowersForm();
+            a.Show();
+        }
     }
 }

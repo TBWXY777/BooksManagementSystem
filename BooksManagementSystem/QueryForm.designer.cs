@@ -110,6 +110,7 @@ namespace WindowsFormsWithSql
             this.Controls.Add(this.label1);
             this.Name = "QueryForm";
             this.Text = "QueryForm";
+            this.Load += new System.EventHandler(this.QueryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bookGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

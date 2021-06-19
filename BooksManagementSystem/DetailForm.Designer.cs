@@ -295,6 +295,7 @@ namespace WindowsFormsWithSql
             this.Controls.Add(this.label1);
             this.Name = "DetailForm";
             this.Text = "DetailForm";
+            this.Load += new System.EventHandler(this.DetailForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

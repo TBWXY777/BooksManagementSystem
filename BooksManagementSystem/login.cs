@@ -12,16 +12,18 @@ using MySql.Data.MySqlClient;
 
 namespace BooksManagementSystem
 {
-    public partial class login : Form
+    public partial class Login : Form
     {
-        public login()
+        public string id;
+
+        public Login()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string name = textBox1.Text.Trim();//获取文本框内容
+            string name = username.Text.Trim();//获取文本框内容
             string password = textBox2.Text.Trim();
             if (name.Equals("") || password.Equals(""))
             {
@@ -42,17 +44,17 @@ namespace BooksManagementSystem
                     DataSet ds = new DataSet();
                     int n = da1.Fill(ds, "register");
                     int m = da2.Fill(ds, "register");
-
+                    id = name;
                     if (n != 0)
                     {
-                        MessageBox.Show("登录成功!");
+                        //MessageBox.Show("登录成功!");
                         this.DialogResult = DialogResult.OK;
                         this.Dispose();
                         this.Close();
                     }
                     else if (m != 0)
                     {
-                        MessageBox.Show("登录成功！");
+                        //MessageBox.Show("登录成功！");
                         this.DialogResult = DialogResult.Yes;
                         this.Dispose();
                         this.Close();
@@ -77,5 +79,14 @@ namespace BooksManagementSystem
         {
             this.Close();
         }
+
+        private void login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                button1_Click(sender,e);
+            }
+        }
+        
     }
 }

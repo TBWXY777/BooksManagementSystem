@@ -13,17 +13,24 @@ namespace BooksManagementSystem
 {
     public partial class BorrowersForm : Form
     {
+        private string readerId;
+
         public BorrowersForm()
         {
             InitializeComponent();
         }
 
+        public BorrowersForm(string id)
+        {
+            InitializeComponent();
+            readerId = id;
+        }
+
         private void BorrowersForm_Load(object sender, EventArgs e)
         {
             //根据借阅者ID显示信息，先初始化ID方便测试
-            string id="100001";
             string sql = "SELECT * FROM reader WHERE r_id={0}";
-            sql = String.Format(sql, id);
+            sql = String.Format(sql, readerId);
             DataRow row = MysqlUtils.QueryOne(sql);
             NameTextBox.Text= row["r_name"].ToString();
             MajorTextBox.Text = row["major"].ToString();

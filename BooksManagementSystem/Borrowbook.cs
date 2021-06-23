@@ -37,9 +37,9 @@ namespace BooksManagementSystem
             int DAY;
             DAY = Convert.ToInt32(daycom.Text);
             string mydatatime;
-            mydatatime = DateTime.Now.ToString("yyyy-MM--dd");
+            mydatatime = DateTime.Now.ToString("yyyy-MM-dd");
             string laterdatatime;
-            laterdatatime = DateTime.Now.AddDays(DAY).ToString("yyyy-MM--dd");
+            laterdatatime = DateTime.Now.AddDays(DAY).ToString("yyyy-MM-dd");
 
             //取书的库存量的值
             /*string bwbk = "";

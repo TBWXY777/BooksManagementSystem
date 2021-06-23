@@ -89,6 +89,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Borrowbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Borrowbook.designer.cs">
+      <DependentUpon>Borrowbook.cs</DependentUpon>
+    </Compile>
     <Compile Include="BorrowersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,12 @@
     <Compile Include="BookMainForm.designer.cs">
       <DependentUpon>BookMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
     <Compile Include="MysqlUtils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -136,6 +148,15 @@
       <DependentUpon>QueryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RegexUtils.cs" />
+    <Compile Include="returnbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="returnbook.designer.cs">
+      <DependentUpon>returnbook.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Borrowbook.resx">
+      <DependentUpon>Borrowbook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BorrowersForm.resx">
       <DependentUpon>BorrowersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +175,9 @@
     <EmbeddedResource Include="BookMainForm.resx">
       <DependentUpon>BookMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -165,6 +189,9 @@
     </Compile>
     <EmbeddedResource Include="QueryForm.resx">
       <DependentUpon>QueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="returnbook.resx">
+      <DependentUpon>returnbook.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -15,13 +15,16 @@ namespace ConnectSql
     {
         public static BookMainForm mainPage;
 
+        public static readonly string connectStr = "server=119.29.40.89;port=3306;user=common_user;password=114514; database=book_manager;charset=utf8;";
+
+
         /// <summary>
         /// 返回默认的连接,记得关闭连接
         /// </summary>
         /// <returns></returns>
         public static MySqlConnection GetMySqlConnection()
         {
-            string connectStr = "server=119.29.40.89;port=3306;user=common_user;password=114514; database=book_manager;charset=utf8;";
+            //string connectStr = "server=119.29.40.89;port=3306;user=common_user;password=114514; database=book_manager;charset=utf8;";
             MySqlConnection con = new MySqlConnection(connectStr);
             return con;
         }

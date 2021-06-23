@@ -81,5 +81,24 @@ namespace BooksManagementSystem
             BorrowersForm a = new BorrowersForm();
             a.Show();
         }
+
+        private void AdminMainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Borrowbook X = new Borrowbook();
+            X.Show();
+            this.Hide();
+        }
+
+        private void returnbut2_Click(object sender, EventArgs e)
+        {
+            returnbook X = new returnbook();
+            X.Show();
+            this.Hide();
+        }
     }
 }

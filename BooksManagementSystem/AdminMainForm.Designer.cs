@@ -43,7 +43,8 @@ namespace BooksManagementSystem
             this.读者书籍表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.书籍书架表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.管理员表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.returnbut2 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,22 +159,33 @@ namespace BooksManagementSystem
             this.管理员表ToolStripMenuItem.Text = "管理员表";
             this.管理员表ToolStripMenuItem.Click += new System.EventHandler(this.管理员表ToolStripMenuItem_Click);
             // 
-            // button1
+            // button3
             // 
-            this.button1.Location = new System.Drawing.Point(318, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button3.Location = new System.Drawing.Point(462, 99);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "借阅";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // returnbut2
+            // 
+            this.returnbut2.Location = new System.Drawing.Point(462, 149);
+            this.returnbut2.Name = "returnbut2";
+            this.returnbut2.Size = new System.Drawing.Size(75, 23);
+            this.returnbut2.TabIndex = 5;
+            this.returnbut2.Text = "归还";
+            this.returnbut2.UseVisualStyleBackColor = true;
+            this.returnbut2.Click += new System.EventHandler(this.returnbut2_Click);
             // 
             // AdminMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.returnbut2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
@@ -181,6 +193,7 @@ namespace BooksManagementSystem
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.AdminMainForm_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -204,7 +217,8 @@ namespace BooksManagementSystem
         private System.Windows.Forms.ToolStripMenuItem 读者书籍表ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 书籍书架表ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 管理员表ToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button returnbut2;
     }
 }
 

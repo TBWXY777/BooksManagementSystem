@@ -1,7 +1,7 @@
 ﻿
 namespace BooksManagementSystem
 {
-    partial class Login
+    partial class login
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace BooksManagementSystem
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -66,12 +66,12 @@ namespace BooksManagementSystem
             this.label3.TabIndex = 2;
             this.label3.Text = "欢迎登录图书管理系统！";
             // 
-            // username
+            // textBox1
             // 
-            this.username.Location = new System.Drawing.Point(342, 156);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(228, 25);
-            this.username.TabIndex = 3;
+            this.textBox1.Location = new System.Drawing.Point(342, 156);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(228, 25);
+            this.textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
@@ -101,7 +101,7 @@ namespace BooksManagementSystem
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Login
+            // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -109,14 +109,12 @@ namespace BooksManagementSystem
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.username);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.KeyPreview = true;
-            this.Name = "Login";
-            this.Text = "Login";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.login_KeyDown);
+            this.Name = "login";
+            this.Text = "login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +125,7 @@ namespace BooksManagementSystem
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>BooksManagementSystem</RootNamespace>
     <AssemblyName>BooksManagementSystem</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BooksManagementSystem.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -89,6 +93,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBorrowerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBorrowerForm.Designer.cs">
+      <DependentUpon>AddBorrowerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Borrowbook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +122,12 @@
     </Compile>
     <Compile Include="DataBaseForm.Designer.cs">
       <DependentUpon>DataBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteBorrowerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteBorrowerForm.Designer.cs">
+      <DependentUpon>DeleteBorrowerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DetailForm.cs">
       <SubType>Form</SubType>
@@ -138,6 +154,12 @@
     <Compile Include="login.designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifyBorrowerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyBorrowerForm.Designer.cs">
+      <DependentUpon>ModifyBorrowerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MysqlUtils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -154,6 +176,15 @@
     <Compile Include="returnbook.designer.cs">
       <DependentUpon>returnbook.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchBorrowerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchBorrowerForm.Designer.cs">
+      <DependentUpon>SearchBorrowerForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddBorrowerForm.resx">
+      <DependentUpon>AddBorrowerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Borrowbook.resx">
       <DependentUpon>Borrowbook.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataBaseForm.resx">
       <DependentUpon>DataBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteBorrowerForm.resx">
+      <DependentUpon>DeleteBorrowerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetailForm.resx">
       <DependentUpon>DetailForm.cs</DependentUpon>
@@ -178,6 +212,9 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModifyBorrowerForm.resx">
+      <DependentUpon>ModifyBorrowerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -186,12 +223,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QueryForm.resx">
       <DependentUpon>QueryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="returnbook.resx">
       <DependentUpon>returnbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchBorrowerForm.resx">
+      <DependentUpon>SearchBorrowerForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

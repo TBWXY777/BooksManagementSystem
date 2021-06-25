@@ -128,7 +128,7 @@ namespace ConnectSql
                 con.Open();
                 cmd.Connection = con;
                 int row = cmd.ExecuteNonQuery();
-                mainPage.flushBookListView();
+                if(mainPage!=null) mainPage.flushBookListView();
                 return row;
             }
             catch (MySqlException ex)

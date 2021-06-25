@@ -16,11 +16,17 @@ namespace WindowsFormsWithSql
 {
     public partial class DetailForm : Form
     {
+		public BookMainForm bookMainForm;
+
         public DetailForm()
         {
             InitializeComponent();
         }
-
+		public DetailForm(BookMainForm bookMainForm)
+		{
+			InitializeComponent();
+			this.bookMainForm = bookMainForm;
+		}
 
 		/// <summary>
 		/// 判断日期是否合法
@@ -83,6 +89,7 @@ namespace WindowsFormsWithSql
             }
 			//如果成功 那么重置picPath
 			picPath = null;
+			if(bookMainForm!=null) bookMainForm.flushBookListView();
 		}
 
         private void btnModify_Click(object sender, EventArgs e)
@@ -107,9 +114,10 @@ namespace WindowsFormsWithSql
 				//只要有一个地方修改出现-1 那就是修改失败
 				MessageBox.Show("修改失败!");
 				return;
-			}
+            }
 			//如果成功 那么重置picPath
 			picPath = null;
+			if (bookMainForm != null) bookMainForm.flushBookListView();
 		}
 		private string picPath = null;
 

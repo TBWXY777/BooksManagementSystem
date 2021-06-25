@@ -17,7 +17,6 @@ namespace WindowsFormsWithSql
         public BookMainForm()
         {
             InitializeComponent();
-            MysqlUtils.mainPage = this;
         }
 
         private void 查询_Click(object sender, EventArgs e)
@@ -57,6 +56,7 @@ namespace WindowsFormsWithSql
         private void btnAdd_Click(object sender, EventArgs e)
         {
             var form = new DetailForm();
+            form.bookMainForm = this;
             form.txtEdition.Text = "2021年6月第1版";
             form.txtPress.Text = "默认出版社";
             form.txtPubDate.Text =  DateTime.Now.Year + "-"
@@ -77,6 +77,7 @@ namespace WindowsFormsWithSql
                 string sql = "delete FROM book where b_id = {0}";
                 sql = String.Format(sql, int.Parse(id));
                 MysqlUtils.Update(sql);
+                flushBookListView();
             }catch(Exception ex)
             {
                 MessageBox.Show("异常!请检查是否选中某一行!");
@@ -112,6 +113,7 @@ namespace WindowsFormsWithSql
                 return null;
             }
             var form = new DetailForm();
+            form.bookMainForm = this;
             //设置文本框内容
             form.txtEdition.Text = row["edition"].ToString();
             form.txtPress.Text = row["press"].ToString();

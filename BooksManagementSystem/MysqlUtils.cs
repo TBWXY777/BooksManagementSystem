@@ -13,7 +13,6 @@ namespace ConnectSql
 {
     class MysqlUtils
     {
-        public static BookMainForm mainPage;
 
         public static readonly string connectStr = "server=119.29.40.89;port=3306;user=common_user;password=114514; database=book_manager;charset=utf8;";
 
@@ -128,7 +127,6 @@ namespace ConnectSql
                 con.Open();
                 cmd.Connection = con;
                 int row = cmd.ExecuteNonQuery();
-                if(mainPage!=null) mainPage.flushBookListView();
                 return row;
             }
             catch (MySqlException ex)

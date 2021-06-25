@@ -16,16 +16,16 @@ namespace BooksManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Login login = new Login();
-            Application.Run(login);
-            if(login.DialogResult == DialogResult.OK)
+            login Login = new login();
+            Application.Run(Login);
+            if(Login.DialogResult == DialogResult.OK)
             {
-                login.Dispose();
-                Application.Run(new BorrowersForm(login.id));
+                Login.Dispose();
+                Application.Run(new BorrowersForm());
             }
-            if (login.DialogResult == DialogResult.Yes)
+            if (Login.DialogResult == DialogResult.Yes)
             {
-                login.Dispose();
+                Login.Dispose();
                 Application.Run(new AdminMainForm());
             }
         }

@@ -100,5 +100,29 @@ namespace BooksManagementSystem
             X.Show();
             this.Hide();
         }
+
+        private void 添加读者ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddBorrowerForm a = new AddBorrowerForm();
+            a.Show();
+        }
+
+        private void 删除读者ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteBorrowerForm d = new DeleteBorrowerForm();
+            d.Show();
+        }
+
+        private void 查询读者ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchBorrowerForm s = new SearchBorrowerForm();
+            s.Show();
+        }
+
+        private void 更新读者ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModifyBorrowerForm m = new ModifyBorrowerForm();
+            m.Show();
+        }
     }
 }

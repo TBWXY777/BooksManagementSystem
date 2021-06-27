@@ -113,6 +113,12 @@
     <Compile Include="BorrowersForm.Designer.cs">
       <DependentUpon>BorrowersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BorrowingHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowingHistory.Designer.cs">
+      <DependentUpon>BorrowingHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="BorrowingSituation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BorrowersForm.resx">
       <DependentUpon>BorrowersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowingHistory.resx">
+      <DependentUpon>BorrowingHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BorrowingSituation.resx">
       <DependentUpon>BorrowingSituation.cs</DependentUpon>

@@ -13,7 +13,7 @@ namespace BooksManagementSystem
 {
     public partial class BorrowersForm : Form
     {
-        private string readerId;
+        public string readerId;
 
         public BorrowersForm()
         {
@@ -36,17 +36,21 @@ namespace BooksManagementSystem
             MajorTextBox.Text = row["major"].ToString();
             DeptTextBox.Text = row["dep"].ToString();
             textBox1.Text = row["borrowed"].ToString();
-            textBox2.Text = row["allow_borrow"].ToString();
+            textBox2.Text = (int.Parse(row["allow_borrow"].ToString())-int.Parse(textBox1.Text)).ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             BorrowingSituation a = new BorrowingSituation();
+            a.getid(readerId);
             a.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            BorrowingHistory a = new BorrowingHistory();
+            a.getid(readerId);
+            a.Show();
         }
     }
 }

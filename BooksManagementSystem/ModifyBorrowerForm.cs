@@ -1,4 +1,4 @@
-﻿using ConnectSql;
+using ConnectSql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +15,8 @@ namespace BooksManagementSystem
 {
     public partial class ModifyBorrowerForm : Form
     {
+        public string getID;
+
         public ModifyBorrowerForm()
         {
             InitializeComponent();
@@ -31,26 +33,14 @@ namespace BooksManagementSystem
             con = MysqlUtils.GetMySqlConnection();
             con.Open();
             MySqlCommand command = new MySqlCommand();
-            command.CommandText = "select * from reader where r_id='" + textBox1 + "'";
-            var reader = command.ExecuteReader();
-            if (reader.HasRows)
-            {
-                reader.Read();
-                //textBox1.Text = reader["r_id"].ToString();
-                textBox2.Text = reader["r_name"].ToString();
-                textBox3.Text = reader["major"].ToString();
-                textBox5.Text = reader["dep"].ToString();
-                textBox4.Text = reader["borrowed"].ToString();
-                textBox6.Text = reader["allow_borrow"].ToString();
-                textBox7.Text = reader["r_pwd"].ToString();
-            }
-            else
-            {
-                MessageBox.Show("该读者不存在");
-                this.Close();
-
-            }
-            reader.Close();
+            string sql = "select * from reader where r_id='" + getID + "'";
+            var dataRow = MysqlUtils.QueryOne(sql);         
+            textBox2.Text = dataRow["r_name"].ToString();
+            textBox3.Text = dataRow["major"].ToString();
+            textBox5.Text = dataRow["dep"].ToString();
+            textBox4.Text = dataRow["borrowed"].ToString();
+            textBox6.Text = dataRow["allow_borrow"].ToString();
+            textBox7.Text = dataRow["r_pwd"].ToString();
             con.Close();
         }
         private void button1_Click(object sender, EventArgs e)
@@ -59,8 +49,7 @@ namespace BooksManagementSystem
             con = MysqlUtils.GetMySqlConnection();
             con.Open();
             MySqlCommand command = new MySqlCommand();
-            command.CommandText = "select * from reader where r_id='" + textBox1 + "'";
-            var reader = command.ExecuteReader();
+            command.CommandText = "select * from reader where r_id='" + getID + "'";
             command.CommandText = "update reader set " +
                    "r_name='" + textBox2.Text +
                    "',major='" + textBox3.Text +
@@ -68,7 +57,7 @@ namespace BooksManagementSystem
                    "',borrowed='" + textBox5.Text +
                    "',allow_borrow='" + textBox6.Text +
                    "',r_pwd='" + textBox7.Text +
-                   "' where r_id='" + textBox1 + "'";
+                   "' where r_id='" + getID + "'";
             if (command.ExecuteNonQuery() != 0)
             {
                 MessageBox.Show("修改成功！");
@@ -79,7 +68,7 @@ namespace BooksManagementSystem
                 MessageBox.Show("修改失败！");
                 con.Close();
             }
-
+            con.Close();
         }
     }
 }

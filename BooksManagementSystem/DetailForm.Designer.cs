@@ -199,7 +199,7 @@ namespace WindowsFormsWithSql
             // 
             // btnModify
             // 
-            this.btnModify.Location = new System.Drawing.Point(583, 352);
+            this.btnModify.Location = new System.Drawing.Point(612, 352);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(130, 47);
             this.btnModify.TabIndex = 17;

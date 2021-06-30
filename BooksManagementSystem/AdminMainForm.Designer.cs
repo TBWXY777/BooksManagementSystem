@@ -51,9 +51,9 @@ namespace BooksManagementSystem
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 30);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 28);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,7 +66,7 @@ namespace BooksManagementSystem
             this.查看数据库ToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip2.Size = new System.Drawing.Size(800, 28);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -165,22 +165,24 @@ namespace BooksManagementSystem
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(462, 99);
+            this.button3.Location = new System.Drawing.Point(479, 173);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(188, 67);
             this.button3.TabIndex = 4;
             this.button3.Text = "借阅";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // returnbut2
             // 
-            this.returnbut2.Location = new System.Drawing.Point(462, 149);
+            this.returnbut2.Location = new System.Drawing.Point(215, 173);
             this.returnbut2.Name = "returnbut2";
-            this.returnbut2.Size = new System.Drawing.Size(75, 23);
+            this.returnbut2.Size = new System.Drawing.Size(191, 67);
             this.returnbut2.TabIndex = 5;
             this.returnbut2.Text = "归还";
             this.returnbut2.UseVisualStyleBackColor = true;
+            this.returnbut2.Visible = false;
             this.returnbut2.Click += new System.EventHandler(this.returnbut2_Click);
             // 
             // AdminMainForm

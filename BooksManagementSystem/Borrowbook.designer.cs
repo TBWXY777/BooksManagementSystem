@@ -70,7 +70,7 @@ namespace BooksManagementSystem
             // 
             // cancelbut
             // 
-            this.cancelbut.Location = new System.Drawing.Point(312, 210);
+            this.cancelbut.Location = new System.Drawing.Point(283, 233);
             this.cancelbut.Name = "cancelbut";
             this.cancelbut.Size = new System.Drawing.Size(78, 33);
             this.cancelbut.TabIndex = 6;
@@ -80,7 +80,7 @@ namespace BooksManagementSystem
             // 
             // borrowbut
             // 
-            this.borrowbut.Location = new System.Drawing.Point(62, 210);
+            this.borrowbut.Location = new System.Drawing.Point(124, 233);
             this.borrowbut.Name = "borrowbut";
             this.borrowbut.Size = new System.Drawing.Size(75, 33);
             this.borrowbut.TabIndex = 5;

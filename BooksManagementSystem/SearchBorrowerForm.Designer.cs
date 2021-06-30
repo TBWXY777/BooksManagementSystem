@@ -51,7 +51,7 @@ namespace BooksManagementSystem
             // 
             this.textBox1.Location = new System.Drawing.Point(198, 48);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 25);
+            this.textBox1.Size = new System.Drawing.Size(220, 25);
             this.textBox1.TabIndex = 2;
             // 
             // label2
@@ -67,12 +67,12 @@ namespace BooksManagementSystem
             // 
             this.textBox2.Location = new System.Drawing.Point(198, 102);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 25);
+            this.textBox2.Size = new System.Drawing.Size(220, 25);
             this.textBox2.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(95, 145);
+            this.button1.Location = new System.Drawing.Point(198, 145);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 39);
             this.button1.TabIndex = 5;
@@ -82,7 +82,7 @@ namespace BooksManagementSystem
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(347, 145);
+            this.button2.Location = new System.Drawing.Point(315, 145);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 39);
             this.button2.TabIndex = 6;
@@ -95,6 +95,7 @@ namespace BooksManagementSystem
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 214);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.Size = new System.Drawing.Size(495, 153);
             this.dataGridView1.TabIndex = 7;

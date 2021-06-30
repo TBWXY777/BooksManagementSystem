@@ -57,7 +57,7 @@ namespace WindowsFormsWithSql
             // 
             // btnQuery
             // 
-            this.btnQuery.Location = new System.Drawing.Point(496, 153);
+            this.btnQuery.Location = new System.Drawing.Point(545, 153);
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(175, 60);
             this.btnQuery.TabIndex = 2;

@@ -30,18 +30,14 @@ namespace BooksManagementSystem
             MySql.Data.MySqlClient.MySqlConnection con;
             con = MysqlUtils.GetMySqlConnection();
             con.Open();
-            MySqlCommand command = new MySqlCommand();
-            command.Connection = con;
-            command.CommandText = "insert into reader(r_id,r_name,major,dep,borrowed,all_borrow,r_pwd) values(''" + "','" + textBox1.Text +  //姓名
-                "','" + textBox2.Text +  //专业
-                "','" + textBox3.Text +  //学院
-                "','" + '0' +//已借
-                "','" + '3' +//可借
-                "','" + textBox4.Text + "')";//密码
+            string sql = "insert into reader values('{0}','{1}','{2}','{3}','{4}','{5}','{6}')";
+            sql = String.Format(sql ,id , textBox1.Text, textBox2.Text, textBox3.Text, "0", "3", textBox4.Text);
+            var dt = MysqlUtils.Update(sql);
             try
             {
-                if (command.ExecuteNonQuery() != 0)
+                if (dt!=-1)
                 {
+                    id++;
                     MessageBox.Show("添加成功");
                     con.Close();
                     return;

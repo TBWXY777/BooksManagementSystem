@@ -14,20 +14,27 @@ using System.Data.SqlClient;
 
 namespace BooksManagementSystem
 {
-    public partial class Borrowbook : Form
+    public partial class Readerborrowbook : Form
     {
-        public Borrowbook()
+        public string Rid;
+        public Readerborrowbook()
         {
             InitializeComponent();
-            numbertxt.Text = Convert.ToString(1);
+            r_numbertxt.Text = Convert.ToString(1);
         }
-        public void Intday()
+        public Readerborrowbook(string id)
         {
-            daycom.Items.Add("1");
-            daycom.Items.Add("3");
-            daycom.Items.Add("7");
+            InitializeComponent();
+            r_numbertxt.Text = Convert.ToString(1);
+            Rid = id;
         }
-        private void borrowbut_Click(object sender, EventArgs e)
+        public void R_Intday()
+        {
+            r_daycom.Items.Add("1");
+            r_daycom.Items.Add("3");
+            r_daycom.Items.Add("7");
+        }
+        private void r_borrowbut_Click(object sender, EventArgs e)
         {
             MySql.Data.MySqlClient.MySqlConnection con;
             string xom;
@@ -37,7 +44,7 @@ namespace BooksManagementSystem
 
             //取时间
             int DAY;
-            DAY = Convert.ToInt32(daycom.Text);
+            DAY = Convert.ToInt32(r_daycom.Text);
             string mydatatime;
             mydatatime = DateTime.Now.ToString("yyyy-MM-dd");
             string laterdatatime;
@@ -53,7 +60,7 @@ namespace BooksManagementSystem
 
             //取借阅上限和以借阅数
             string owbook = "select * from reader where r_id='{0}'";
-            owbook = string.Format(owbook, readertxt.Text);
+            owbook = string.Format(owbook, Rid);
             MySqlCommand mand = new MySqlCommand(owbook, con);
             MySqlDataReader sw = mand.ExecuteReader();
             sw.Read();
@@ -61,7 +68,7 @@ namespace BooksManagementSystem
             int s = Convert.ToInt32(sw.GetValue(6));
             con.Close();
 
-            if (n == s || n>s)
+            if (n == s || n > s)
             {
                 MessageBox.Show("以达借阅上限");
             }
@@ -73,30 +80,32 @@ namespace BooksManagementSystem
                 }
                 else
                 {
-                    int num = Convert.ToInt32(numbertxt.Text);
-                    string borr = "insert into reader_book values ( null,'{0}','{1}','{2}',NULL,'{4}','{3}','{4}');";
-                    borr = string.Format(borr, readertxt.Text, Booktxt.Text, mydatatime, laterdatatime,num);
-                    MysqlUtils.Update(borr);
+                    int num = Convert.ToInt32(r_numbertxt.Text);
+                    //借阅功能
+                    string borr = "insert into reader_book values (null, '{0}','{1}','{2}',NULL,'{4}','{3}','{4}');";
+                    borr = string.Format(borr, Rid, r_bookidtxt.Text, mydatatime, laterdatatime, num);
+                    MysqlUtils.Update(borr);    
                     MessageBox.Show("借阅成功");
 
-                    string updet = "update reader set borrowed=borrowed+{1} where r_id={0};";
-                    updet = string.Format(updet, readertxt.Text,num);
-                    MysqlUtils.Update(updet); 
+                    string sql = "update reader set borrowed=borrowed+{1} where r_id={0};";
+                    sql = string.Format(sql, Rid,num);
+                    MysqlUtils.Update(sql);
                 }
             }
-                     
         }
 
-        private void cancelbut_Click(object sender, EventArgs e)
+        private void r_daycom_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AdminMainForm X = new AdminMainForm();
-            X.Show();
-            this.Hide();
         }
 
-        private void Borrowbook_Load(object sender, EventArgs e)
+        private void r_cancelbut_Click(object sender, EventArgs e)
         {
-            Intday();
+            this.Close();
+        }
+
+        private void Readerborrowbook_Load(object sender, EventArgs e)
+        {
+            R_Intday();
         }
     }
 }

@@ -52,5 +52,11 @@ namespace BooksManagementSystem
             a.getid(readerId);
             a.Show();
         }
+
+        private void r_borrowbut_Click(object sender, EventArgs e)
+        {
+            Readerborrowbook X = new Readerborrowbook(readerId);
+            X.Show();
+        }
     }
 }

@@ -30,12 +30,12 @@ namespace BooksManagementSystem
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.readerlab1 = new System.Windows.Forms.Label();
-            this.readertxt1 = new System.Windows.Forms.TextBox();
-            this.dataView1 = new System.Windows.Forms.DataGridView();
-            this.returnlab = new System.Windows.Forms.Button();
-            this.inquirelab = new System.Windows.Forms.Button();
             this.cancelbut1 = new System.Windows.Forms.Button();
+            this.inquirelab = new System.Windows.Forms.Button();
+            this.returnlab = new System.Windows.Forms.Button();
+            this.readertxt1 = new System.Windows.Forms.TextBox();
+            this.readerlab1 = new System.Windows.Forms.Label();
+            this.dataView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -65,42 +65,15 @@ namespace BooksManagementSystem
             this.splitContainer1.SplitterDistance = 119;
             this.splitContainer1.TabIndex = 0;
             // 
-            // readerlab1
+            // cancelbut1
             // 
-            this.readerlab1.AutoSize = true;
-            this.readerlab1.Location = new System.Drawing.Point(197, 31);
-            this.readerlab1.Name = "readerlab1";
-            this.readerlab1.Size = new System.Drawing.Size(53, 15);
-            this.readerlab1.TabIndex = 0;
-            this.readerlab1.Text = "读者ID";
-            // 
-            // readertxt1
-            // 
-            this.readertxt1.Location = new System.Drawing.Point(315, 28);
-            this.readertxt1.Name = "readertxt1";
-            this.readertxt1.Size = new System.Drawing.Size(174, 25);
-            this.readertxt1.TabIndex = 1;
-            // 
-            // dataView1
-            // 
-            this.dataView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataView1.Location = new System.Drawing.Point(0, 0);
-            this.dataView1.Name = "dataView1";
-            this.dataView1.RowHeadersWidth = 51;
-            this.dataView1.RowTemplate.Height = 27;
-            this.dataView1.Size = new System.Drawing.Size(800, 327);
-            this.dataView1.TabIndex = 2;
-            // 
-            // returnlab
-            // 
-            this.returnlab.Location = new System.Drawing.Point(344, 81);
-            this.returnlab.Name = "returnlab";
-            this.returnlab.Size = new System.Drawing.Size(85, 36);
-            this.returnlab.TabIndex = 2;
-            this.returnlab.Text = "归还";
-            this.returnlab.UseVisualStyleBackColor = true;
-            this.returnlab.Click += new System.EventHandler(this.returnlab_Click);
+            this.cancelbut1.Location = new System.Drawing.Point(571, 81);
+            this.cancelbut1.Name = "cancelbut1";
+            this.cancelbut1.Size = new System.Drawing.Size(84, 35);
+            this.cancelbut1.TabIndex = 4;
+            this.cancelbut1.Text = "取消";
+            this.cancelbut1.UseVisualStyleBackColor = true;
+            this.cancelbut1.Click += new System.EventHandler(this.cancelbut1_Click);
             // 
             // inquirelab
             // 
@@ -112,15 +85,42 @@ namespace BooksManagementSystem
             this.inquirelab.UseVisualStyleBackColor = true;
             this.inquirelab.Click += new System.EventHandler(this.inquirelab_Click);
             // 
-            // cancelbut1
+            // returnlab
             // 
-            this.cancelbut1.Location = new System.Drawing.Point(571, 81);
-            this.cancelbut1.Name = "cancelbut1";
-            this.cancelbut1.Size = new System.Drawing.Size(84, 35);
-            this.cancelbut1.TabIndex = 4;
-            this.cancelbut1.Text = "取消";
-            this.cancelbut1.UseVisualStyleBackColor = true;
-            this.cancelbut1.Click += new System.EventHandler(this.cancelbut1_Click);
+            this.returnlab.Location = new System.Drawing.Point(344, 81);
+            this.returnlab.Name = "returnlab";
+            this.returnlab.Size = new System.Drawing.Size(85, 36);
+            this.returnlab.TabIndex = 2;
+            this.returnlab.Text = "归还";
+            this.returnlab.UseVisualStyleBackColor = true;
+            this.returnlab.Click += new System.EventHandler(this.returnlab_Click);
+            // 
+            // readertxt1
+            // 
+            this.readertxt1.Location = new System.Drawing.Point(315, 28);
+            this.readertxt1.Name = "readertxt1";
+            this.readertxt1.Size = new System.Drawing.Size(174, 25);
+            this.readertxt1.TabIndex = 1;
+            // 
+            // readerlab1
+            // 
+            this.readerlab1.AutoSize = true;
+            this.readerlab1.Location = new System.Drawing.Point(197, 31);
+            this.readerlab1.Name = "readerlab1";
+            this.readerlab1.Size = new System.Drawing.Size(53, 15);
+            this.readerlab1.TabIndex = 0;
+            this.readerlab1.Text = "读者ID";
+            // 
+            // dataView1
+            // 
+            this.dataView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataView1.Location = new System.Drawing.Point(0, 0);
+            this.dataView1.Name = "dataView1";
+            this.dataView1.RowHeadersWidth = 51;
+            this.dataView1.RowTemplate.Height = 27;
+            this.dataView1.Size = new System.Drawing.Size(800, 327);
+            this.dataView1.TabIndex = 2;
             // 
             // returnbook
             // 

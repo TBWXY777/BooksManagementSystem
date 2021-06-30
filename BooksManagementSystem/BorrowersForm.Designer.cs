@@ -42,6 +42,7 @@ namespace BooksManagementSystem
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.r_borrowbut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -158,11 +159,22 @@ namespace BooksManagementSystem
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // r_borrowbut
+            // 
+            this.r_borrowbut.Location = new System.Drawing.Point(84, 461);
+            this.r_borrowbut.Name = "r_borrowbut";
+            this.r_borrowbut.Size = new System.Drawing.Size(106, 38);
+            this.r_borrowbut.TabIndex = 13;
+            this.r_borrowbut.Text = "借阅";
+            this.r_borrowbut.UseVisualStyleBackColor = true;
+            this.r_borrowbut.Click += new System.EventHandler(this.r_borrowbut_Click);
+            // 
             // BorrowersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(274, 509);
+            this.Controls.Add(this.r_borrowbut);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -199,5 +211,6 @@ namespace BooksManagementSystem
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button r_borrowbut;
     }
 }

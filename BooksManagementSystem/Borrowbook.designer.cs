@@ -38,6 +38,9 @@ namespace BooksManagementSystem
             this.readertxt = new System.Windows.Forms.TextBox();
             this.daycom = new System.Windows.Forms.ComboBox();
             this.daylab = new System.Windows.Forms.Label();
+            this.numberlab = new System.Windows.Forms.Label();
+            this.numbertxt = new System.Windows.Forms.TextBox();
+            this.ben = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Booklab
@@ -46,7 +49,7 @@ namespace BooksManagementSystem
             this.Booklab.Location = new System.Drawing.Point(84, 83);
             this.Booklab.Name = "Booklab";
             this.Booklab.Size = new System.Drawing.Size(53, 15);
-            this.Booklab.TabIndex = 0;
+            this.Booklab.TabIndex = 8;
             this.Booklab.Text = "书籍ID";
             // 
             // Timebook
@@ -55,7 +58,7 @@ namespace BooksManagementSystem
             this.Timebook.Location = new System.Drawing.Point(84, 133);
             this.Timebook.Name = "Timebook";
             this.Timebook.Size = new System.Drawing.Size(67, 15);
-            this.Timebook.TabIndex = 1;
+            this.Timebook.TabIndex = 9;
             this.Timebook.Text = "借阅时间";
             // 
             // Booktxt
@@ -63,14 +66,14 @@ namespace BooksManagementSystem
             this.Booktxt.Location = new System.Drawing.Point(191, 80);
             this.Booktxt.Name = "Booktxt";
             this.Booktxt.Size = new System.Drawing.Size(170, 25);
-            this.Booktxt.TabIndex = 3;
+            this.Booktxt.TabIndex = 2;
             // 
             // cancelbut
             // 
             this.cancelbut.Location = new System.Drawing.Point(312, 210);
             this.cancelbut.Name = "cancelbut";
             this.cancelbut.Size = new System.Drawing.Size(78, 33);
-            this.cancelbut.TabIndex = 4;
+            this.cancelbut.TabIndex = 6;
             this.cancelbut.Text = "取消";
             this.cancelbut.UseVisualStyleBackColor = true;
             this.cancelbut.Click += new System.EventHandler(this.cancelbut_Click);
@@ -91,7 +94,7 @@ namespace BooksManagementSystem
             this.readerlab.Location = new System.Drawing.Point(84, 32);
             this.readerlab.Name = "readerlab";
             this.readerlab.Size = new System.Drawing.Size(53, 15);
-            this.readerlab.TabIndex = 6;
+            this.readerlab.TabIndex = 7;
             this.readerlab.Text = "读者ID";
             // 
             // readertxt
@@ -99,7 +102,7 @@ namespace BooksManagementSystem
             this.readertxt.Location = new System.Drawing.Point(191, 29);
             this.readertxt.Name = "readertxt";
             this.readertxt.Size = new System.Drawing.Size(170, 25);
-            this.readertxt.TabIndex = 7;
+            this.readertxt.TabIndex = 1;
             // 
             // daycom
             // 
@@ -107,7 +110,7 @@ namespace BooksManagementSystem
             this.daycom.Location = new System.Drawing.Point(191, 133);
             this.daycom.Name = "daycom";
             this.daycom.Size = new System.Drawing.Size(48, 23);
-            this.daycom.TabIndex = 8;
+            this.daycom.TabIndex = 3;
             // 
             // daylab
             // 
@@ -118,11 +121,39 @@ namespace BooksManagementSystem
             this.daylab.TabIndex = 9;
             this.daylab.Text = "天";
             // 
+            // numberlab
+            // 
+            this.numberlab.AutoSize = true;
+            this.numberlab.Location = new System.Drawing.Point(84, 172);
+            this.numberlab.Name = "numberlab";
+            this.numberlab.Size = new System.Drawing.Size(53, 15);
+            this.numberlab.TabIndex = 10;
+            this.numberlab.Text = "数  目";
+            // 
+            // numbertxt
+            // 
+            this.numbertxt.Location = new System.Drawing.Point(191, 169);
+            this.numbertxt.Name = "numbertxt";
+            this.numbertxt.Size = new System.Drawing.Size(48, 25);
+            this.numbertxt.TabIndex = 4;
+            // 
+            // ben
+            // 
+            this.ben.AutoSize = true;
+            this.ben.Location = new System.Drawing.Point(245, 172);
+            this.ben.Name = "ben";
+            this.ben.Size = new System.Drawing.Size(22, 15);
+            this.ben.TabIndex = 12;
+            this.ben.Text = "本";
+            // 
             // Borrowbook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 314);
+            this.Controls.Add(this.ben);
+            this.Controls.Add(this.numbertxt);
+            this.Controls.Add(this.numberlab);
             this.Controls.Add(this.daylab);
             this.Controls.Add(this.daycom);
             this.Controls.Add(this.readertxt);
@@ -151,5 +182,8 @@ namespace BooksManagementSystem
         private System.Windows.Forms.TextBox readertxt;
         private System.Windows.Forms.ComboBox daycom;
         private System.Windows.Forms.Label daylab;
+        private System.Windows.Forms.Label numberlab;
+        private System.Windows.Forms.TextBox numbertxt;
+        private System.Windows.Forms.Label ben;
     }
 }

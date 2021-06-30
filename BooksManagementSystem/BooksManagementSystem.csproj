@@ -171,6 +171,12 @@
     <Compile Include="QueryForm.designer.cs">
       <DependentUpon>QueryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Readerborrowbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Readerborrowbook.Designer.cs">
+      <DependentUpon>Readerborrowbook.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegexUtils.cs" />
     <Compile Include="returnbook.cs">
       <SubType>Form</SubType>
@@ -231,6 +237,9 @@
     </Compile>
     <EmbeddedResource Include="QueryForm.resx">
       <DependentUpon>QueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Readerborrowbook.resx">
+      <DependentUpon>Readerborrowbook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="returnbook.resx">
       <DependentUpon>returnbook.cs</DependentUpon>

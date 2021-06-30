@@ -30,12 +30,12 @@ namespace BooksManagementSystem
             MySql.Data.MySqlClient.MySqlConnection con;
             con = MysqlUtils.GetMySqlConnection();
             con.Open();
-            MySqlCommand command = new MySqlCommand();
-            command.Connection = con;
-            command.CommandText = "delete from reader where r_id='" + textBox1 + "'";
+            string sql = "delete from reader where r_id='{0}'";
+            sql = String.Format(sql, textBox1);
+            var dt = MysqlUtils.Update(sql);
             try
             {
-                if (command.ExecuteNonQuery() != 0)
+                if (dt!=-1)
                 {
                     MessageBox.Show("删除成功");
                     con.Close();

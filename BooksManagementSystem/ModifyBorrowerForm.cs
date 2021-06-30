@@ -48,17 +48,10 @@ namespace BooksManagementSystem
             MySql.Data.MySqlClient.MySqlConnection con;
             con = MysqlUtils.GetMySqlConnection();
             con.Open();
-            MySqlCommand command = new MySqlCommand();
-            command.CommandText = "select * from reader where r_id='" + getID + "'";
-            command.CommandText = "update reader set " +
-                   "r_name='" + textBox2.Text +
-                   "',major='" + textBox3.Text +
-                   "',dep='" + textBox4.Text +
-                   "',borrowed='" + textBox5.Text +
-                   "',allow_borrow='" + textBox6.Text +
-                   "',r_pwd='" + textBox7.Text +
-                   "' where r_id='" + getID + "'";
-            if (command.ExecuteNonQuery() != 0)
+            string sql = "update reader set r_name='{1}',major='{2}',dep='{3}',borrowed='{4}',allow_borrow='{5}',r_pwd='{6}' where r_id='{0}'";
+            sql = String.Format(sql, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text,textBox6.Text,textBox7.Text,getID);
+            var dt = MysqlUtils.Update(sql);
+            if (dt!=-1)
             {
                 MessageBox.Show("修改成功！");
                 con.Close();

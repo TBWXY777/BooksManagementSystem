@@ -30,8 +30,8 @@ namespace BooksManagementSystem
             MySql.Data.MySqlClient.MySqlConnection con;
             con = MysqlUtils.GetMySqlConnection();
             con.Open();
-            string sql = "delete from reader where r_id='{0}'";
-            sql = String.Format(sql, textBox1);
+            string sql = "delete from reader where {0} = '{1}'";
+            sql = String.Format(sql,"r_id" ,textBox1.Text);
             var dt = MysqlUtils.Update(sql);
             try
             {

@@ -30,8 +30,10 @@ namespace BooksManagementSystem
             MySql.Data.MySqlClient.MySqlConnection con;
             con = MysqlUtils.GetMySqlConnection();
             con.Open();
+            MySqlCommand command = new MySqlCommand();
+            int id = (int)command.LastInsertedId;
             string sql = "insert into reader values('{0}','{1}','{2}','{3}','{4}','{5}','{6}')";
-            sql = String.Format(sql ,id , textBox1.Text, textBox2.Text, textBox3.Text, "0", "3", textBox4.Text);
+            sql = String.Format(sql ,id , textBox2.Text, textBox1.Text, textBox3.Text, "0", "3", textBox4.Text);
             var dt = MysqlUtils.Update(sql);
             try
             {

@@ -74,7 +74,7 @@ namespace BooksManagementSystem
             // 
             this.button1.Location = new System.Drawing.Point(198, 145);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 39);
+            this.button1.Size = new System.Drawing.Size(85, 39);
             this.button1.TabIndex = 5;
             this.button1.Text = "查找";
             this.button1.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@ namespace BooksManagementSystem
             // 
             this.button2.Location = new System.Drawing.Point(315, 145);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 39);
+            this.button2.Size = new System.Drawing.Size(80, 39);
             this.button2.TabIndex = 6;
             this.button2.Text = "取消";
             this.button2.UseVisualStyleBackColor = true;

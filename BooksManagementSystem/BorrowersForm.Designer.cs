@@ -161,9 +161,9 @@ namespace BooksManagementSystem
             // 
             // r_borrowbut
             // 
-            this.r_borrowbut.Location = new System.Drawing.Point(70, 450);
+            this.r_borrowbut.Location = new System.Drawing.Point(48, 450);
             this.r_borrowbut.Name = "r_borrowbut";
-            this.r_borrowbut.Size = new System.Drawing.Size(106, 38);
+            this.r_borrowbut.Size = new System.Drawing.Size(160, 57);
             this.r_borrowbut.TabIndex = 13;
             this.r_borrowbut.Text = "借阅";
             this.r_borrowbut.UseVisualStyleBackColor = true;
@@ -173,7 +173,7 @@ namespace BooksManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(258, 509);
+            this.ClientSize = new System.Drawing.Size(258, 540);
             this.Controls.Add(this.r_borrowbut);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

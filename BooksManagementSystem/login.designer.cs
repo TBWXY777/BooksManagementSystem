@@ -68,24 +68,24 @@ namespace BooksManagementSystem
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(342, 156);
+            this.username.Location = new System.Drawing.Point(300, 156);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(228, 25);
+            this.username.Size = new System.Drawing.Size(270, 25);
             this.username.TabIndex = 3;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(342, 224);
+            this.textBox2.Location = new System.Drawing.Point(300, 224);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(228, 25);
+            this.textBox2.Size = new System.Drawing.Size(270, 25);
             this.textBox2.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(266, 288);
+            this.button1.Location = new System.Drawing.Point(300, 298);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
+            this.button1.Size = new System.Drawing.Size(110, 51);
             this.button1.TabIndex = 5;
             this.button1.Text = "登  录";
             this.button1.UseVisualStyleBackColor = true;
@@ -93,9 +93,9 @@ namespace BooksManagementSystem
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(462, 288);
+            this.button2.Location = new System.Drawing.Point(460, 298);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 30);
+            this.button2.Size = new System.Drawing.Size(110, 51);
             this.button2.TabIndex = 6;
             this.button2.Text = "取  消";
             this.button2.UseVisualStyleBackColor = true;

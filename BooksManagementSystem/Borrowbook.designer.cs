@@ -80,7 +80,7 @@ namespace BooksManagementSystem
             // 
             // borrowbut
             // 
-            this.borrowbut.Location = new System.Drawing.Point(124, 233);
+            this.borrowbut.Location = new System.Drawing.Point(140, 233);
             this.borrowbut.Name = "borrowbut";
             this.borrowbut.Size = new System.Drawing.Size(75, 33);
             this.borrowbut.TabIndex = 5;

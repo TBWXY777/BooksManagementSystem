@@ -67,7 +67,7 @@ namespace BooksManagementSystem
             // 
             // cancelbut1
             // 
-            this.cancelbut1.Location = new System.Drawing.Point(535, 81);
+            this.cancelbut1.Location = new System.Drawing.Point(543, 70);
             this.cancelbut1.Name = "cancelbut1";
             this.cancelbut1.Size = new System.Drawing.Size(84, 35);
             this.cancelbut1.TabIndex = 4;
@@ -77,7 +77,7 @@ namespace BooksManagementSystem
             // 
             // inquirelab
             // 
-            this.inquirelab.Location = new System.Drawing.Point(175, 82);
+            this.inquirelab.Location = new System.Drawing.Point(175, 71);
             this.inquirelab.Name = "inquirelab";
             this.inquirelab.Size = new System.Drawing.Size(88, 35);
             this.inquirelab.TabIndex = 3;
@@ -87,7 +87,7 @@ namespace BooksManagementSystem
             // 
             // returnlab
             // 
-            this.returnlab.Location = new System.Drawing.Point(353, 81);
+            this.returnlab.Location = new System.Drawing.Point(360, 70);
             this.returnlab.Name = "returnlab";
             this.returnlab.Size = new System.Drawing.Size(85, 36);
             this.returnlab.TabIndex = 2;
